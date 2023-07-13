@@ -49,6 +49,14 @@ public class Cookie {
         this.itemsInCart = itemsInCart;
     }
 
+    public static String getCookieType() {
+        return cookieType;
+    }
+
+    public static void setCookieType(String cookieType) {
+        Cookie.cookieType = cookieType;
+    }
+
     @Override
     public String toString() {
 
