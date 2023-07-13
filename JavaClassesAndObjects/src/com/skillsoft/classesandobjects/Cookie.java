@@ -68,4 +68,44 @@ public class Cookie {
         return String.format("Cookie id: %s, userName: %s, sessionKey: %s, itemsInCart: %d",
                 id, userName, sessionKey, itemsInCart);
     }
+
+    public static void main(String[] args) {
+
+        System.out.println("\nExecuting code in the Cookies class main() method");
+
+        Cookie c = new Cookie("Alice22", "ali@22", 2);
+        c.instanceMethodOne();
+        c.instanceMethodTwo();
+        c.instanceMethodThree();
+    }
+
+    private void instanceMethodOne() {
+        System.out.println("\nInstance method one");
+
+        staticMethodOne();
+    }
+
+    private void instanceMethodTwo() {
+        System.out.println("\nInstance method two");
+
+        staticMethodTwo();
+    }
+
+    private void instanceMethodThree() {
+        System.out.println("\nInstance method three");
+
+        staticMethodThree();
+    }
+
+    private static void staticMethodOne() {
+        System.out.println("\nStatic method one");
+    }
+
+    private static void staticMethodTwo() {
+        System.out.println("\nStatic method two");
+    }
+
+    private static void staticMethodThree() {
+        System.out.println("\nStatic method three");
+    }
 }
