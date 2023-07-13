@@ -50,4 +50,34 @@ public class Product {
     public String toString() {
         return String.format("Product name: %s, price: %.1f, category: %s", name, price, category);
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other == null) {
+            return false;
+        }
+
+        if (this == other) {
+            return true;
+        }
+
+        if (!(other instanceof Product)) {
+            return false;
+        }
+
+        Product product = (Product) other;
+
+        // NOTE: Compare every field which makes sense for equality
+        // Primitive types are compared using ==, Objects are compared using .equals()
+        if (this.id == product.id &&
+                this.name.equals(product.name) &&
+                this.price == product.price &&
+                this.category.equals(product.category)) {
+
+            return true;
+        }
+
+        return false;
+    }
+
 }
