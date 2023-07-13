@@ -15,7 +15,11 @@ public class Main {
         System.out.println("\n(c3): " + c3);
         System.out.println("Cookie Type (c3): " + c3.cookieType);
 
-        c1.cookieType = "LOGGED_IN_USER_COOKIE";
+        Cookie.cookieType = "LOGGED_OUT_USER_COOKIE";
+
+        System.out.println("\n*********");
+        System.out.println("Updated Static Variable: " + Cookie.cookieType);
+        System.out.println("*********");
 
         System.out.println("\nCookie Type (c1): " + c1.cookieType);
         System.out.println("\nCookie Type (c2): " + c2.cookieType);

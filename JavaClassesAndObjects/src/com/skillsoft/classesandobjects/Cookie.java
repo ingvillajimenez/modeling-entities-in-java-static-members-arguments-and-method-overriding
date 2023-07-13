@@ -7,7 +7,7 @@ public class Cookie {
     private String sessionKey;
     private int itemsInCart;
 
-    public static String cookieType = "SESSION_COOKIE";
+    private static String cookieType = "SESSION_COOKIE";
 
     public Cookie(String id, String userName, String sessionKey, int itemsInCart) {
 
