@@ -1,5 +1,7 @@
 package com.skillsoft.classesandobjects;
 
+import java.util.Objects;
+
 public class Product {
 
     private int id;
@@ -49,6 +51,11 @@ public class Product {
     @Override
     public String toString() {
         return String.format("Product name: %s, price: %.1f, category: %s", name, price, category);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, price, category);
     }
 
     @Override
