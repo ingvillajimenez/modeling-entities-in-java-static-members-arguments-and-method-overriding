@@ -1,25 +1,36 @@
 package com.skillsoft.classesandobjects;
 
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
+        Product phone = new Product(12345, "iPhone 6s",
+                500, "Mobiles and Accessories");
 
-        Car car = new Car("Audi A5", "Sedan", 41800);
+        Product tv = new Product(84736, "Samsung",
+                1500, "Electronics");
 
-        System.out.println("Inside main() BEFORE function invocation: " + car);
+        Product shoes = new Product(28986, "Nike",
+                300, "Footwear");
 
-        updateCar(car);
+        Product watch = new Product(23452, "Rolex",
+                800, "Mobiles and Accessories");
 
-        System.out.println("\nInside main() AFTER function invocation: " + car);
-    }
+        System.out.println("Phone: " + phone);
+        System.out.println("TV: " + tv);
+        System.out.println("Shoes: " + shoes);
+        System.out.println("Watch: " + watch);
 
-    private static void updateCar(Car car) {
-        System.out.println("\noriginal (inside function): " + car);
+        System.out.println();
 
-        car.setName("Honda Accord");
-        car.setPrice(24500);
+        System.out.println("phone.equals(tv): " + (phone.equals(tv)));
+        System.out.println("shoes.equals(watch): " + (shoes.equals(watch)));
+        System.out.println("watch.equals(phone): " + (watch.equals(phone)));
 
-        System.out.println("car after reassignment (inside function): " + car);
+        System.out.println();
+
+        Product phoneCopy = phone;
+        Product shoesCopy = shoes;
+
+        System.out.println("phone.equals(phoneCopy): " + (phone.equals(phoneCopy)));
+        System.out.println("shoes.equals(shoesCopy): " + (shoes.equals(shoesCopy)));
     }
 }
