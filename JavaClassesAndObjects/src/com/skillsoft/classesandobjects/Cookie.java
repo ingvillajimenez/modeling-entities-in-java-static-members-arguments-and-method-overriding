@@ -1,21 +1,26 @@
 package com.skillsoft.classesandobjects;
 
+import java.util.Random;
+
 public class Cookie {
+
+    private static final Random uniqueIdGenerator = new Random();
+    private static String cookieType = "SESSION_COOKIE";
 
     private String id;
     private String userName;
     private String sessionKey;
     private int itemsInCart;
 
-    private static String cookieType = "SESSION_COOKIE";
+    public Cookie(String userName, String sessionKey, int itemsInCart) {
 
-    public Cookie(String id, String userName, String sessionKey, int itemsInCart) {
+        this.id = "cookieId-" + uniqueIdGenerator.nextInt();
 
-        this.id = id;
         this.userName = userName;
         this.sessionKey = sessionKey;
         this.itemsInCart = itemsInCart;
     }
+
 
     public String getId() {
         return id;

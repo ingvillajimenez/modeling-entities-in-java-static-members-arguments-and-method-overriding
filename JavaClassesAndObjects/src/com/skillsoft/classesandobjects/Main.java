@@ -3,11 +3,14 @@ package com.skillsoft.classesandobjects;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("\n**** Static functions always invoked on a class");
-        System.out.println("Initial value of cookie type: " + Cookie.getCookieType());
+        Cookie c1 = new Cookie("Alice22", "ali@22", 2);
+        System.out.println("\n(c1): " + c1);
 
-        Cookie.setCookieType("LOGGED_OUT_USER_COOKIE");
+        Cookie c2 = new Cookie("Bob667", "B#t12", 0);
+        System.out.println("\n(c2): " + c2);
 
-        System.out.println("Updated value of cookie type: " + Cookie.getCookieType());
+        Cookie c3 = new Cookie("Charles", "C223", 4);
+        System.out.println("\n(c3): " + c3);
+
     }
 }
