@@ -5,30 +5,21 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        String[] arrayOfFruits = new String[] {"apple", "banana", "kiwi", "strawberry"};
+        Car car = new Car("Audi A5", "Sedan", 41800);
 
-        System.out.println("Inside main() BEFORE function invocation: " +
-                Arrays.toString(arrayOfFruits));
+        System.out.println("Inside main() BEFORE function invocation: " + car);
 
-        updateArray(arrayOfFruits, 0, "PAPAYA");
+        updateCar(car);
 
-        System.out.println("\nInside main() AFTER function invocation: " +
-                Arrays.toString(arrayOfFruits));
-
-        updateArray(arrayOfFruits, 1, "MANGO");
-
-        System.out.println("\nInside main() AFTER second function invocation: " +
-                Arrays.toString(arrayOfFruits));
-
+        System.out.println("\nInside main() AFTER function invocation: " + car);
     }
 
-    private static void updateArray(String[] arrayOfFruits, int indexToUpdate, String fruit) {
-        System.out.println("\noriginal (inside function): " +
-                Arrays.toString(arrayOfFruits));
+    private static void updateCar(Car car) {
+        System.out.println("\noriginal (inside function): " + car);
 
-        arrayOfFruits[indexToUpdate] = fruit;
+        car.setName("Honda Accord");
+        car.setPrice(24500);
 
-        System.out.println("array after reassignment (inside function): " +
-                Arrays.toString(arrayOfFruits));
+        System.out.println("car after reassignment (inside function): " + car);
     }
 }
